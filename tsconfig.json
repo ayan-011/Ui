@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/home/point1", "app/home/point2", "app/home/point3"  ],
   "exclude": ["node_modules"]
 }
