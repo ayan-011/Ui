@@ -45,13 +45,18 @@ export default function LayoutClient({
         setIsOpen={setIsSidebarOpen}
       />
 
-      <main className="flex-1 relative">
+      <main className="flex-1 relative ">
         {!isSidebarOpen && (
           <button
             onClick={() => setIsSidebarOpen(true)}
-            className="fixed p-13 z-50 text-xl"
+            className="fixed p-13 z-50 text-xl text-black "
           >
-            →
+            <div className="menu flex flex-col gap-[2px]  cursor-pointer">
+              <div className="menuline w-[17px] h-[2px] bg-black/40 rounded-full   "></div>
+            <div className="menuline w-[17px] h-[2px] bg-black/40 rounded-full   "></div>
+            <div className="menuline w-[17px] h-[2px] bg-black/40 rounded-full "></div>
+            </div>
+            
           </button>
         )}
 

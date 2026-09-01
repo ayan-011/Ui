@@ -40,8 +40,9 @@ html {
   max-width: 100%;
   margin-inline: auto;
   transition: padding 0.3s ease, max-width 0.3s ease;
+ 
 
-    /* background-color: red; */
+  /* background-color: red; */
   
 }
 
@@ -50,7 +51,7 @@ html {
   .home-content {
     padding: 4rem 8rem;
     max-width: 1400px;
-    background-color: red;
+    /* background-color: red; */
     justify-content: center;
   }
 }
@@ -60,5 +61,21 @@ html {
   .home-content {
     /* padding: 1.5rem 1rem; */
     max-width: 100%; 
+    /* background-color: red; */
+  }
+}
+/* Sidebar-open state — container is narrower, so this rule just won't match */
+
+.content-full {
+  /* padding: 1.5rem 1rem; */
+  margin-left: 150px;
+  /* background-color: red; */
+}
+
+@container page (max-width: 1299px) {
+  .content-full {
+    /* padding: 1.5rem 1rem; */
+    margin-left: 0px;
+    /* background-color: red; */
   }
 }

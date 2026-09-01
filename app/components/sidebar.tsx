@@ -57,18 +57,26 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           ${isOpen ? "md:w-60 md:border-r" : "md:w-0 md:border-r-0"}
         `}
       >
-        <div className="h-20 text-black flex items-center justify-center text-2xl">
-          {/* Undo! */}
-        </div>
+         
 
         {isOpen && (
-          <nav className="relative flex flex-col gap-2 items-center py-20 border-b border-t border-black/10">
+          <nav className="relative flex flex-col     py-5    ">
+
+            <div className="   flex  py-5 items-center border-b border-black/10 ">
+
+            <span className="logo    text-black font-semibold text-2xl  px-6 ">
+                Undo!
+            </span>
+
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-5 right-5 text-black text-xl"
+              className="absolute top-10 right-5 text-black text-xl  cursor-pointer"
             >
               ←
             </button>
+            </div>
+
+    <div className="middle bg-red-  flex flex-col px-6 py-10 gap-2">
 
             {links.map((link) => (
               <a
@@ -82,16 +90,19 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     ? "text-black/40"
                     : "text-black"
                 }
+                
               >
                 {link.label}
               </a>
             ))}
+    </div>
+            
+        <div className="last text-black flex   border-t-1 border-black/10 w-full p-6">
+            Download & <br /> Contact 
+        </div>
           </nav>
         )}
 
-        <div className="last text-black flex justify-center py-10">
-          {/* Download & <br /> Contact */}
-        </div>
       </aside>
     </>
   );
