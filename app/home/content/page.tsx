@@ -7,13 +7,26 @@ const Content = () => {
       <div className="">
         <h1 className="content text-[20vw] -mt-35 -ml-10 font-bold font-rethink">Content</h1>
 
-        <div className="titles  content-full flex flex-col gap-3 home-content shrink-0">
+        <div className="flex flex-col text-black home-content shrink-0   ">
+
+        
+      <div className="flex w-[70vw]  justify-between p-10  ">
+
+         <div className="  ">
           <h1 className='font-rethink font-semibold text-black/40 text-4xl'>01- <span className='text-black'>Point 1</span> </h1>
           <h1 className='font-rethink font-semibold text-black/40 text-4xl'>02- <span className='text-black'>Point 2</span> </h1>
           <h1 className='font-rethink font-semibold text-black/40 text-4xl'>03- <span className='text-black'>Point 3</span> </h1>
           <h1 className='font-rethink font-semibold text-black/40 text-4xl'>04- <span className='text-black'>Point 4</span> </h1>
           <h1 className='font-rethink font-semibold text-black/40 text-4xl'>05- <span className='text-black'>Point 5</span> </h1>
         </div>
+
+        <div className="empty w-110  ">
+           
+        </div>
+      </div>
+
+      </div>
+
       </div>
     </div>
   )

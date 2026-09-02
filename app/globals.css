@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #f2ecec;
 }
 
 @theme inline {
@@ -19,7 +19,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f7dfec;
     --foreground: #ededed;
   }
 }
@@ -36,7 +36,7 @@ html {
 
 /* globals.css */
 .home-content {
-  padding: 1.2rem;
+  /* padding: 1.2rem; */
   max-width: 100%;
   margin-inline: auto;
   transition: padding 0.3s ease, max-width 0.3s ease;
@@ -49,10 +49,11 @@ html {
 /* Full screen state — sidebar closed, container is wide */
 @container page (min-width: 1300px) {
   .home-content {
-    padding: 4rem 8rem;
+    /* padding: 4rem 8rem; */
     max-width: 1400px;
     /* background-color: red; */
     justify-content: center;
+    align-items: center;
   }
 }
 
