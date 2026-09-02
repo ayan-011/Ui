@@ -35,6 +35,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
     { id: "point1", label: "Point 1" },
     { id: "point2", label: "Point 2" },
     { id: "point3", label: "Point 3" },
+    { id: "point4", label: "Point 4" }, 
   ];
 
   return (
@@ -87,7 +88,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 }
                 className={
                   activeSection === link.id
-                    ? "text-black/40"
+                    ? "text-black/20"
                     : "text-black"
                 }
                 
