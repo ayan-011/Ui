@@ -36,12 +36,13 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   };
 }, []);
   const links = [
-    { id: "home", number: "01", label: "Home" },
-    { id: "content",number: "02", label: "Content" },
-    { id: "point1", number: "03",label: "Point 1" },
-    { id: "point2", number: "04",label: "Point 2" },
-    { id: "point3", number: "05",label: "Point 3" },
-    { id: "point4", number: "06",label: "Point 4" }, 
+    // { id: "home", number: "01", label: "Home" },
+    // { id: "content",number: "02", label: "Content" },
+    { id: "point1", number: "01",label: "Point 1" },
+    { id: "point2", number: "02",label: "Point 2" },
+    { id: "point3", number: "03",label: "Point 3" },
+    { id: "point4", number: "04",label: "Point 4" }, 
+    // { id: "point5", number: "05",label: "Point 5" }, 
   ];
 
   return (
@@ -71,9 +72,22 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
             <div className="   flex  py-5 items-center border-b border-black/10 ">
 
-            <span className="logo    text-black font-semibold text-2xl  px-6 ">
-                Undo!
-            </span>
+           <a
+  href="#home"
+  onClick={(e) => {
+    e.preventDefault();
+    document.getElementById("home")?.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    if (window.innerWidth < 768) {
+      setIsOpen(false);
+    }
+  }}
+  className="logo text-black font-semibold text-2xl px-6"
+>
+  Undo!
+</a>
 
             <button
               onClick={() => setIsOpen(false)}
