@@ -1,4 +1,5 @@
 import React from 'react'
+import Images from './component/Images'
 
 const Point3 = () => {
   return (
@@ -20,73 +21,7 @@ const Point3 = () => {
           </div>
 
 
-          <div className="images p-10 w-[70vw] flex flex-col gap-20 text-lg font-semibold font-rethink">
-
-<div className="image1 flex flex-col gap-2">
-  <span>image 1</span>
-<img src="https://picsum.photos/id/1015/1600/900" alt="" className='' />
-</div>
-
-<div className="image2 flex flex-col gap-2">
-  <span>image 2</span>
-<img src="https://picsum.photos/id/1015/1600/900" alt="" className='' />
-</div>
-
-<div className="image3 flex flex-col gap-2">
-  <span>image 3</span>
-<img src="https://picsum.photos/id/1015/1600/900" alt="" className='' />
-</div>
-
-
-<div className="grids gap-2 flex flex-col">
-  <span>Grid Images</span>
-
-<div className="  grid grid-cols-3 grid-rows-2 gap-4 w-full">
-
-    <img
-    src="https://picsum.photos/500/300?random=1"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-   <img
-    src="https://picsum.photos/500/300?random=2"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-
-  <img
-    src="https://picsum.photos/500/300?random=3"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-
-  <img
-    src="https://picsum.photos/500/300?random=4"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-
-  <img
-    src="https://picsum.photos/500/300?random=5"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-
-  <img
-    src="https://picsum.photos/500/300?random=6"
-    alt=""
-    className="w-full h-full object-cover"
-  />
-
-
-</div>
-</div>
-
-<div className="image4 flex flex-col gap-2">
-  <span>image 4</span>
-<img src="https://picsum.photos/id/1015/1600/900" alt="" className='' />
-</div>
-          </div>
+        <Images/>
 
       </div>
 

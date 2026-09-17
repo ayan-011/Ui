@@ -11,31 +11,37 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll("section[id]");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+  const handleScroll = () => {
+    let currentSection = "home";
+    const offset = 150;
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
 
-    return () => observer.disconnect();
-  }, []);
+      if (rect.top <= offset) {
+        currentSection = section.id;
+      }
+    });
 
+    setActiveSection(currentSection);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
   const links = [
-    { id: "home", label: "Home" },
-    { id: "content", label: "Content" },
-    { id: "point1", label: "Point 1" },
-    { id: "point2", label: "Point 2" },
-    { id: "point3", label: "Point 3" },
-    { id: "point4", label: "Point 4" }, 
+    { id: "home", number: "01", label: "Home" },
+    { id: "content",number: "02", label: "Content" },
+    { id: "point1", number: "03",label: "Point 1" },
+    { id: "point2", number: "04",label: "Point 2" },
+    { id: "point3", number: "05",label: "Point 3" },
+    { id: "point4", number: "06",label: "Point 4" }, 
   ];
 
   return (
@@ -55,7 +61,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
 
           md:sticky md:translate-x-0
-          ${isOpen ? "md:w-60 md:border-r" : "md:w-0 md:border-r-0"}
+          ${isOpen ? "md:w-63 md:border-r" : "md:w-0 md:border-r-0"}
         `}
       >
          
@@ -77,25 +83,31 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             </button>
             </div>
 
-    <div className="middle bg-red-  flex flex-col px-6 py-10 gap-2">
+    <div className="middle bg-red-  flex flex-col px-6 py-10 gap-1">
 
             {links.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={() =>
-                  window.innerWidth < 768 && setIsOpen(false)
-                }
-                className={
-                  activeSection === link.id
-                    ? "text-black/20"
-                    : "text-black"
-                }
-                
-              >
-                {link.label}
-              </a>
-            ))}
+   <a
+    key={link.id}
+    href={`#${link.id}`}
+    onClick={() =>
+      window.innerWidth < 768 && setIsOpen(false)
+    }
+    className={`flex flex-col group ${
+      activeSection === link.id
+        ? "text-orange-500/60"
+        : "text-black"
+    }`}
+  >
+    <span>{link.label}</span>
+    {/* group-hover:text-orange-500 text-[12px] font-semibold */}
+    <span 
+    className={`group-hover:text-orange-500 text-[12px] font-semibold ${
+      activeSection === link.id
+        ? "text-black/60"
+        : "text-black/60"
+    }`}>{link.number}</span>
+  </a>
+))}
     </div>
             
         <div className="last text-black flex   border-t-1 border-black/10 w-full p-6">
