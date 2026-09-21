@@ -7,6 +7,7 @@ import "./globals.css";
 import Sidebar from "./components/sidebar";
 
 import localFont from "next/font/local";
+import PageLoader from "./components/loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,7 +63,12 @@ export default function LayoutClient({
 
           
      <div className="flex-1 [container-type:inline-size] [container-name:page]">
+      
+
+      <PageLoader>
+
     {children}
+      </PageLoader>
   </div>
    
       </main>

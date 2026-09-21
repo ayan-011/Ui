@@ -3,7 +3,7 @@ import TypeSpecimenSection from './component/Typespecimensection'
 
 const Point4 = () => {
   return (
-    <div className='w-full h-fit'>
+    <div className='w-full h-fit bg-white'>
       <TypeSpecimenSection/>
     </div>
   )

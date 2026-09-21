@@ -126,15 +126,15 @@ function VisualCoin({ accent }: { accent: string }) {
 
 function VisualGrid({ accent }: { accent: string }) {
   return (
-    <div className="grid h-24 w-24 grid-cols-3 gap-1.5 rounded-xl bg-white/80 p-3 shadow-lg backdrop-blur">
-      {Array.from({ length: 9 }).map((_, i) => (
-        <span
-          key={i}
-          className={`h-2.5 w-2.5 rounded-full ${accent} animate-pulse`}
-          style={{ animationDelay: `${i * 80}ms` }}
-        />
-      ))}
-    </div>
+  <div className="grid h-24 w-24 grid-cols-3 place-items-center gap-1.5 rounded-xl bg-white/80 p-3 shadow-lg backdrop-blur">
+  {Array.from({ length: 9 }).map((_, i) => (
+    <span
+      key={i}
+      className={`h-2.5 w-2.5 rounded-full ${accent} animate-pulse`}
+      style={{ animationDelay: `${i * 80}ms` }}
+    />
+  ))}
+</div>
   );
 }
 
@@ -203,7 +203,7 @@ function SpecimenRow({ spec }: { spec: Spec }) {
 
 export default function TypeSpecimenSection() {
   return (
-    <section className="mx-auto max-w-4xl bg-white px-6 py-16 sm:px-10">
+    <section className="   max-w-[70vw] bg-white px-6 py-16 sm:px-10">
       {SPECS.map((spec) => (
         <SpecimenRow key={spec.id} spec={spec} />
       ))}
