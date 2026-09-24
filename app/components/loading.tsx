@@ -17,7 +17,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
     <>
       {loading && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white backdrop-blur-sm">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-orange-500" />
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-blue-400" />
         </div>
       )}
       {children}
