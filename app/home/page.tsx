@@ -19,7 +19,7 @@ const Home = () => {
       items-center flex px-10  justify-center  
     "
   >
-    <span className='text-[9vw] font-rethink flex'>Undo <span className='text-orange-500 '>!</span></span>
+    <span className='text-[9vw] font-rethink flex'>Undo!</span>
   </div>
 
   {/* Image section */}
