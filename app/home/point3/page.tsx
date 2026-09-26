@@ -4,7 +4,7 @@ import Images from './component/Images'
 const Point3 = () => {
   return (
     <div className='w-full h-fit bg-white overflow-hidden border-b-1  border-black/10'>
-        <div className="flex flex-col text-black home-content shrink-0      ">
+        <div className="flex flex-col text-black home-content shrink-0     ">
 
           <div className=" flex w-[70vw]  justify-between p-10  ">
 

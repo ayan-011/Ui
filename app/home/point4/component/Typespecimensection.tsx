@@ -203,7 +203,7 @@ function SpecimenRow({ spec }: { spec: Spec }) {
 
 export default function TypeSpecimenSection() {
   return (
-    <section className="   max-w-[70vw] bg-white px-6 py-16 sm:px-10">
+    <section className="w-full bg-white px-6 py-16 sm:px-10">
       {SPECS.map((spec) => (
         <SpecimenRow key={spec.id} spec={spec} />
       ))}
